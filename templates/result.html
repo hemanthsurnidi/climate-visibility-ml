@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #acb6e5);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 18px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+            width: 350px;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+        }
+
+        .value {
+            font-size: 36px;
+            font-weight: bold;
+            color: #007acc;
+            margin-bottom: 25px;
+        }
+
+        a {
+            display: inline-block;
+            text-decoration: none;
+            padding: 10px 20px;
+            background: #007acc;
+            color: white;
+            border-radius: 10px;
+        }
+
+        a:hover {
+            background: #005f99;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>🌤️ Predicted Visibility</h2>
+    <div class="value">{{ prediction }} km</div>
+    <a href="/">🔁 Predict Again</a>
+</div>
+
+</body>
+</html>

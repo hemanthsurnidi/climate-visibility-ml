@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Climate Visibility Prediction</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #acb6e5);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background: white;
+            padding: 30px 40px;
+            border-radius: 16px;
+            width: 420px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        p {
+            text-align: center;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        label {
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 6px 0 15px 0;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #007acc;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #005f99;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🌤️ Climate Visibility</h1>
+    <p>Predict visibility based on weather conditions</p>
+
+    <form action="/predict" method="post">
+        <label>Dry Bulb Temperature (°F)</label>
+        <input type="number" step="any" name="DRYBULBTEMPF" required>
+
+        <label>Wet Bulb Temperature (°F)</label>
+        <input type="number" step="any" name="WETBULBTEMPF" required>
+
+        <label>Dew Point Temperature (°F)</label>
+        <input type="number" step="any" name="DewPointTempF" required>
+
+        <label>Relative Humidity (%)</label>
+        <input type="number" step="any" name="RelativeHumidity" required>
+
+        <label>Wind Speed</label>
+        <input type="number" step="any" name="WindSpeed" required>
+
+        <label>Wind Direction</label>
+        <input type="number" step="any" name="WindDirection" required>
+
+        <label>Station Pressure</label>
+        <input type="number" step="any" name="StationPressure" required>
+
+        <label>Sea Level Pressure</label>
+        <input type="number" step="any" name="SeaLevelPressure" required>
+
+        <label>Precipitation</label>
+        <input type="number" step="any" name="Precip" required>
+
+        <button type="submit">🔮 Predict Visibility</button>
+    </form>
+</div>
+
+</body>
+</html>
